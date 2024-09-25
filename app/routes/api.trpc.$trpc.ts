@@ -1,4 +1,4 @@
-import { ActionFunction, LoaderFunction } from '@remix-run/node'
+import type { ActionFunction, LoaderFunction } from '@remix-run/node'
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch'
 
 import { env } from '@/lib/env'
