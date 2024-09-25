@@ -64,9 +64,29 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply relative box-border border-border underline-offset-4 selection:bg-foreground selection:text-background;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* prettier-ignore  */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-balance;
+  }
+  p {
+    @apply text-pretty;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0.25rem;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-ring;
   }
 }
