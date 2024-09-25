@@ -4,6 +4,8 @@ import type { MetaFunction } from '@remix-run/node'
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
 import { ThemeProvider } from 'next-themes'
 
+import { TRPCReactProvider } from './lib/trpc/react'
+
 export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => (
   <html lang="en" suppressHydrationWarning>
     <head>
@@ -14,7 +16,7 @@ export const Layout: React.FC<React.PropsWithChildren> = ({ children }) => (
     </head>
     <body className="font-sans antialiased">
       <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
-        {children}
+        <TRPCReactProvider>{children}</TRPCReactProvider>
       </ThemeProvider>
       <ScrollRestoration />
       <Scripts />

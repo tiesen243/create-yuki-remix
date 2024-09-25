@@ -51,7 +51,7 @@ const react = tseslint.config({
 })
 
 export const restrictEnvAccess = tseslint.config(
-  { ignores: ['**/env.js'] },
+  { ignores: ['**/env.{js,ts}'] },
   {
     files: ['**/*.js', '**/*.ts', '**/*.tsx'],
     rules: {
