@@ -7,7 +7,11 @@ export default {
   content: ['./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      fontFamily: { sans: ['Inter', ...fontFamily.sans] },
+      container: { center: true, padding: '2rem', screens: { '2xl': '1400px' } },
+      fontFamily: {
+        sans: ['GeistSans', ...fontFamily.sans],
+        mono: ['GeistMono', ...fontFamily.mono],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
